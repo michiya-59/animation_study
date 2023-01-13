@@ -1,0 +1,84 @@
+body{
+  padding: 0 20px;
+}
+body h1{
+  border-bottom: 1px solid gray;
+  padding: 0 10px;
+}
+
+body a{
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+body a:hover{
+  color: black;
+}
+
+
+dl div{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+dl div dt{
+  cursor: pointer;
+  user-select: none;
+}
+
+dl div dt::before{
+  content: "Q.";
+}
+
+dl > div dt::after{
+  content: "+";
+  position: absolute;
+  top: -8px;
+  right: 16px;
+  transition: transform .3s;
+  font-size: 25px;
+}
+
+dl > div.open dt::after{
+  transform: rotate(45deg);
+}
+
+dd{
+  display: none;
+  margin: 0;
+  margin-top: 10px;
+  background: #e6e6e6;
+  padding: 16px;
+  border-radius: 1px 1px 5px 5px;
+  animation: fadeIn .3s;
+  -webkit-animation: .3s fadeIn;
+}
+
+dl > div.open dd{
+  display: block;
+}
+
+dl div dd::before{
+  content: "A.";
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+  100%{
+    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}

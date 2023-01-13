@@ -1,0 +1,49 @@
+main a{
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+main a:hover{
+  color: black;
+}
+
+.menu{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.menu-title{
+  display: flex;
+  background: cadetblue;
+  transition: all .5s ease;
+}
+
+.menu-title h1{
+  font-weight: bold;
+  width: 90%;
+  font-size: 20px;
+  text-align: left;
+
+}
+
+.menu-icon{
+  cursor: pointer;
+
+}
+
+.menu-content{
+  background: aqua;
+  display: block;
+  transition: all .5s ease;
+}
+
+.display-none{
+  display: none !important;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: all .5s ease;
+}
