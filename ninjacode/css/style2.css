@@ -182,3 +182,152 @@ p{
 .image:hover{
   background-image: url(https://www.724685.com/images/site/20190401-02.png);
 }
+
+
+.seal{
+  margin: 100px auto;
+  width: 100px;
+  height: 100px;
+  background-color: #dddddd;
+  position: relative;
+}
+
+.seal::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, white 50%, gray 50%);
+  width: 0;
+  height: 0;
+  transition-duration: .5s;
+}
+
+.seal:hover::before{
+  width: 30px;
+  height: 30px;
+}
+
+.reinbo_btn{
+  width: 200px;
+  height: 50px;
+  background-color: #333333;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  margin: 100px auto 0 auto;
+}
+
+.reinbo_btn:hover{
+  background: linear-gradient(to left,  #E7484F 20%, #FCED00 20% 40%, #009E4F 40% 60%, #00AAC3 60% 80%, #732982 80%);
+  animation: backgroud_slide 3s linear infinite;
+  -webkit-animation: backgroud_slide 3s linear infinite;
+}
+
+@keyframes backgroud_slide {
+  to{
+    background-position: 200px;
+  }
+}
+
+.side_btn{
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border:2px solid #333333;
+  color: #333333;
+  cursor: pointer;
+  margin: 100px auto;
+  position: relative;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.side_btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  width: 0;
+  height: 50px;
+}
+.side_btn::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  width: 0;
+  height: 50px;
+}
+
+.side_btn:hover{
+  color: white;
+  box-shadow:inset -100px 0 0 #333333, inset 100px 0 0 #333333;
+}
+
+.door_btn{
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid black;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.door_btn::before,.door_btn::after{
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  background-color: black;
+  z-index: -1;
+  transition: .5s;
+}
+.door_btn::before{
+  left: 0;
+}
+.door_btn::after{
+  right: 0;
+}
+.door_btn:hover{
+  color: black;
+}
+
+.door_btn{
+  perspective: 500px;
+}
+.door_btn::before{
+  transform-origin: left;
+}
+.door_btn::after{
+  transform-origin: right;
+}
+.door_btn:hover::before{
+  transform: rotateY(-100deg);
+  -webkit-transform: rotateY(-100deg);
+  -moz-transform: rotateY(-100deg);
+  -ms-transform: rotateY(-100deg);
+  -o-transform: rotateY(-100deg);
+}
+.door_btn:hover::after{
+  transform: rotateY(100deg);
+  -webkit-transform: rotateY(100deg);
+  -moz-transform: rotateY(100deg);
+  -ms-transform: rotateY(100deg);
+  -o-transform: rotateY(100deg);
+}
